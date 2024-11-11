@@ -1,0 +1,63 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.itemContainer {
+  /* Ajusta el tamaño Altura y Ancho del contenedor */
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+}
+
+.image,
+.video {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.buttonContainer {
+  position: absolute;
+  align-items: center;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  left: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.button {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #323232;
+  color: white;
+  font-weight: bold;
+}
+
+.itemContainer:hover .buttonContainer {
+  opacity: 1;
+}
